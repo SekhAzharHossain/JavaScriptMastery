@@ -70,3 +70,34 @@ const findTheGreatestNumber=(getArray)=>{
 // findTheGreatestNumber(arr1)
 // findTheGreatestNumber([9,5,6,7])
 
+
+// Current Context (this)
+// this referes to the current context we are currently in
+
+const login={
+    username:"azhar",
+    price:999,
+
+    gretting:function(){
+        console.log(`${this.username}, welcome to the website`)
+    }
+}
+login.username="aman"
+// login.gretting()
+
+// Arrow functions
+
+const addTwoNumber=(num1,num2)=>{
+    return num1+num2
+}
+// console.log(addTwoNumber(5,6))
+
+// explicit arrow function
+
+const addtwonumber=(num1,num2)=>(num1+num2)
+// console.log(addtwonumber(4,5))
+
+// to return an object in arrow function
+const returnObject=(name)=>({name: `${name}`})
+// you can't use this in the function
+// console.log(returnObject('azhar'))
