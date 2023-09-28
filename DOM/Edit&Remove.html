@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove DOM</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <ul class="lang">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(name){
+        const li=document.createElement('li')
+        li.innerHTML=`${name}`
+        document.querySelector(".lang").appendChild(li)
+    }
+    // addLanguage('Python')
+    // more optimized method
+
+    function addLanguageOptimized(name){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(name))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addLanguageOptimized('python')
+    addLanguageOptimized('Python')
+    addLanguage('C++')
+    // Edit
+
+    let secontLang=document.querySelector("li:nth-child(2)")
+    secontLang.innerHTML='Java'
+
+    let newLang=document.createElement('li')
+    newLang.textContent='ruby'
+    let thirdLang=document.querySelector('li:nth-child(3)')
+    thirdLang.replaceWith(newLang)
+
+    let firstLang=document.querySelector('li:nth-child(1)')
+    firstLang.outerHTML='<li>TypeScript</li>'
+
+
+    // Remove
+    let lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
