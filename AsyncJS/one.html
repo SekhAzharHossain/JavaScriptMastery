@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <div id="one">
+        <h1>Hello</h1>
+        <button>work</button>
+    </div>
+</body>
+<script>
+    const changeText=function(){
+        document.querySelector('h1').innerHTML='hi Everyone'
+    }
+    const changeme=setTimeout(changeText,3000)
+    document.querySelector('button').addEventListener('click',function(){
+        clearTimeout(changeme)
+        console.log("The text changing program has been stopped")
+    })
+</script>
+</html>
