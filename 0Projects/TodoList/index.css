@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  
+.diagonal {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #007bff, #99ccff);
+    position: relative;
+    overflow: hidden;
+}
+  
+.diagonal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, transparent 48%, #007bff 48%, #99ccff 52%, transparent 52%);
+    z-index: 1;
+}
+  
+.above-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, #003366, #007bff);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+
+.heading{
+    text-align: center;
+}
+
+
+/* Todo list container */
+
+.todoListContainer{
+    height: 28rem;
+    width: 23rem;
+    background-color: aqua;
+    z-index: 2;
+    border-radius: 5%;
+    opacity: 0.8;
+}
+
+.completedTaskContainer{
+    height: 28rem;
+    width: 23rem;
+    background-color: aqua;
+    border-radius: 5%;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+/* Input */
+
+.inputBox{
+    height: 4rem;
+    background-color:aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.3rem;
+    /* margin-top: 1rem; */
+    overflow: hidden;
+    
+}
+
+#input{
+    height: 2rem;
+    width: 70%;
+    background-color: #99ccff;
+}
+
+#addButton{
+    height: 2.36rem;
+    width: 25%;
+    background-color: #99ccff;
+}
+
+.inputItems{
+    margin-top: 0;
+    background-color: aqua;
+    height: 20rem;
+    width: 100%;
+}
+
+/* To put the button and the text in p tag on the same line */
+.sameLine{
+    display: flex;
+    gap:3rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+}
+
+.redcolor{
+    background-color: red;
+}
