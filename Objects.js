@@ -66,6 +66,6 @@ const course={
 }
 
 // console.log(course.couseInstructure)
-const {couseInstructure:instructure}=course
-console.log(instructure)
+// const {couseInstructure:instructure}=course
+// console.log(instructure)
 
