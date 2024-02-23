@@ -3,6 +3,8 @@
 // Can be declared seperately as well as jointly
 
 let promiseMe=new Promise(function(resolve,reject){
+    // Do an async task
+    // DB calls,cryptography,network
     setTimeout(() => {
         console.log("promised is kept")
         resolve()
