@@ -69,3 +69,5 @@ const course={
 // const {couseInstructure:instructure}=course
 // console.log(instructure)
 
+const val=Object.getOwnPropertyDescriptor(Math,"PI")
+console.log(val)
